@@ -20,8 +20,14 @@ public sealed class ClientHullrotProjectileSystem : SharedHullrotProjectileSyste
     public override void Initialize()
     {
         base.Initialize();
+        SubscribeLocalEvent<HullrotProjectileComponent, UpdateIsPredictedEvent>(OnUpdatePred);
     }
 
+    public void OnUpdatePred(Entity<HullrotProjectileComponent> ent, ref UpdateIsPredictedEvent ev)
+    {
+        ev.IsPredicted = true;
+        ev.BlockPrediction = false;
+    }
     public override void projectileQueued(Entity<HullrotProjectileComponent> projectile)
     {
 
@@ -31,6 +37,7 @@ public sealed class ClientHullrotProjectileSystem : SharedHullrotProjectileSyste
     {
         foreach (var projectile in FireNextTick)
         {
+            _physics.UpdateIsPredicted(projectile.Owner);
             _transform.SetCoordinates(projectile.Owner, projectile.Comp.initialPosition);
             _physics.SetLinearVelocity(projectile.Owner, projectile.Comp.initialMovement);
         }
