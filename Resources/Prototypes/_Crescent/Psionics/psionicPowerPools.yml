@@ -1,0 +1,4 @@
+- type: weightedRandom
+  id: RandomHardbloodPowerPool
+  weights:
+    SiphonBloodPower: 1 # tier 1, first power you NEED to get
