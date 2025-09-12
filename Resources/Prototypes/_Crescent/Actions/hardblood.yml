@@ -4,16 +4,15 @@
   description: action-description-siphon-blood
   categories: [ HideSpawnMenu ]
   components:
-    - type: InstantAction
-      icon: { sprite: Mobs/Animals/mothroach.rsi, state: icon }
-      useDelay: 180
-      checkCanInteract: false
-      event: !type:SummonPsionicFamiliarActionEvent
-        familiarProto: MobMothroachPsionic
-        powerName: "Summon Mothroach"
+    - type: EntityTargetAction
+      icon: { sprite: _Crescent/Psionics/Hardblood/powers.rsi, state: siphon-blood }
+      useDelay: 2
+      canTargetSelf: false
+      event: !type:SiphonBloodActionEvent
+        powerName: Siphon Blood
         checkInsulation: true
         doGlimmerEffects: true
         followMaster: true
         ignoreFamiliarLimit: true
-        minGlimmer: 10
-        maxGlimmer: 20
+        minGlimmer: 2
+        maxGlimmer: 5

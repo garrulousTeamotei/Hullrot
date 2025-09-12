@@ -8,10 +8,11 @@
   initializeFunctions:
     - !type:AddPsionicActions
       actions:
-        - ActionSummonMothroach
+        - ActionSiphonBlood
     - !type:PsionicFeedbackPopup
     - !type:PsionicFeedbackSelfChat
-      feedbackMessage: summon-mothroach-power-initialization-feedback
+      feedbackMessage: siphon-blood-power-initialization-feedback
+      initializationFeedbackColor: "#FF0000"
     - !type:PsionicModifyGlimmer
       glimmerModifier: 10
     - !type:AddPsionicStatSources

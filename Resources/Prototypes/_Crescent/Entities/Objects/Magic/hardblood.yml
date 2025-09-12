@@ -1,0 +1,42 @@
+- type: entity
+  parent: [ClothingOuterArmorBasic]
+  id: ClothingOuterArmorAntibody
+  name: antibody armor
+  description: placeholder
+  components:
+  - type: Sprite
+    sprite: _Crescent/Psionics/Hardblood/antiibody_armor.rsi
+  - type: Clothing
+    sprite: _Crescent/Psionics/Hardblood/antiibody_armor.rsi
+  - type: DegradeableArmor
+    armorMaxHealth: 500
+    armorType: Plastic
+    armorRepair: Unrepairable
+    initialModifiers:
+      flatReductions:
+        Blunt: 15
+        Slash: 5
+        Piercing: 20
+        Heat: 45
+        Caustic: 10
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: GroupExamine
+
+- type: entity
+  parent: ClothingOuterArmorAntibody
+  id: ClothingOuterArmorAntibodyUnremoveable
+  name: antibody armor
+  suffix: unremovable
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: BaseItem
+  id: MeleeWeaponMonocyteCutlass
+  name: monocyte cutlass
+  description: placeholder part 2 (insert snarky comment here)
+  components:
+  - type: Sprite
+    sprite: _Crescent/Psionics/Hardblood/monocyte_cutlass.rsi
+    state: icon

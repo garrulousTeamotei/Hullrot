@@ -36,7 +36,8 @@ public enum ArmorRepairMaterial
     HomelandAlloy = 1 << 7,
     Kevlar = 1 << 8,
     PlasteelEncasedKevlar = 1 << 9,
-    NTCeramic = 1 << 10
+    NTCeramic = 1 << 10,
+    Unrepairable = 1 << 11, // no item should have this as a repair material. if you do it ill fucking kill you. i will rip your lungs out. dont make me do it.
 
 }
 [Serializable, NetSerializable]
