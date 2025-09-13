@@ -6,10 +6,10 @@ public abstract partial class HardbloodArtsTargetEvent : EntityTargetActionEvent
 {
 
     /// <summary>
-    ///     How much blood this power requires to use.
+    ///     How much blood this power requires to use. This is a percentage from 0 to 1 (e.g. 0.1 is 10%). If you want to know why we have to do this, blame Wizden bloodstream code.
     /// </summary>
     [DataField]
-    public float BloodUsage = 1f;
+    public float BloodUsage = 0.1f;
 
     /// <summary>
     ///     Whether this power checks if the wearer is psionically insulated.
