@@ -1,0 +1,4 @@
+- type: shader
+  id: Sleeping
+  kind: source
+  path: "/Textures/_Arcadis/Shaders/sleeping.swsl"
