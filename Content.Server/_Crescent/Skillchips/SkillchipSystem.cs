@@ -91,7 +91,6 @@ public sealed partial class SkillchipSystem : EntitySystem
 
             // holy shitcode part 2: copy-paste edition!
         }
-
     }
 
     private void AddFunctions(EntityUid playerUid, SkillchipComponent skillchip)
