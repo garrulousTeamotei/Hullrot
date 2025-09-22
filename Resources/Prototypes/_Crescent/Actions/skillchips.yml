@@ -6,6 +6,9 @@
   components:
   - type: EntityTargetAction
     useDelay: 7.5
+    whitelist:
+      components:
+      - Door
     itemIconStyle: BigAction
     canTargetSelf: false
     interactOnMiss: false
