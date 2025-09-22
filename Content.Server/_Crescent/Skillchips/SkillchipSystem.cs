@@ -1,3 +1,4 @@
+using Content.Shared._Crescent.Skillchips;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
