@@ -9,4 +9,30 @@
       layers:
         - state: cerebraltrainer
     - type: Skilldeck
-      skillchipSlotAmount: 10
+      skillchipSlotAmount: 50
+
+- type: entity
+  parent: BaseItem
+  id: SkilldeckSHIBase
+  name: SHI CL1 skill deck
+  description: A standard Shinoharan skilldeck issued to employees with the required implant.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Misc/cybernetics.rsi
+      layers:
+        - state: cerebraltrainer
+    - type: Skilldeck
+      skillchipSlotAmount: 2
+
+- type: entity
+  parent: BaseItem
+  id: SkilldeckIPMBase
+  name: IPM B-01 skill deck
+  description: A prototype of the skilldeck commonly seen in production within most factions.
+  components:
+    - type: Sprite
+      sprite: _Crescent/Objects/Misc/cybernetics.rsi
+      layers:
+        - state: cerebraltrainer
+    - type: Skilldeck
+      skillchipSlotAmount: 5

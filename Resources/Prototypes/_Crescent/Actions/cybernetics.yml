@@ -48,3 +48,4 @@
     event: !type:BluespaceShuntEvent
     checkCanAccess: false
     range: 0
+

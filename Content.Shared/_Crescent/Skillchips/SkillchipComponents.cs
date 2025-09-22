@@ -1,5 +1,7 @@
 using Content.Shared.Traits;
 
+namespace Content.Shared._Crescent.Skillchips;
+
 [RegisterComponent]
 public sealed partial class SkillchipImplantHolderComponent : Component
 {

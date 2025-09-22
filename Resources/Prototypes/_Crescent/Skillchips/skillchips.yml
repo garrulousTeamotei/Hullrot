@@ -9,11 +9,19 @@
       layers:
         - state: crypt_gray
     - type: Skillchip
+      onImplantFunctions:
+      - !type:TraitAddActions
+        actions:
+          - ActionHackAirlock
+      onRemoveFunctions:
+      - !type:TraitRemoveActions
+        actions:
+          - ActionHackAirlock
 
 - type: entity
   parent: BaseItem
   id: SkillchipAdmeme
-  name: skillchip that does things
+  name: skillchip that makes your head explode
   description: Admemery at work, people.
   components:
     - type: Sprite
