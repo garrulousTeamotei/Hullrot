@@ -29,7 +29,7 @@ public sealed partial class DeepSleepSleepingComponent : Component
     /// How much progression does the person get per tick?
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SleepProgressionSpeed = 0.05f;
+    public float SleepProgressionSpeed = 0.0005f;
 
     [DataField]
     public ResPath DreamerMap = new ResPath("TOBEWRITTEN");
