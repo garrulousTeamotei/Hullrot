@@ -1,3 +1,4 @@
+using Content.Shared.Actions;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -28,7 +29,7 @@ public sealed partial class DeepSleepSleepingComponent : Component
     /// How much progression does the person get per tick?
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SleepProgressionSpeed = 0.0f;
+    public float SleepProgressionSpeed = 0.05f;
 
     [DataField]
     public ResPath DreamerMap = new ResPath("TOBEWRITTEN");
@@ -44,6 +45,22 @@ public sealed partial class DreamerComponent : Component
     public EntityUid OriginalEntity = new EntityUid(0); // if the ID is 0 you're doomed forever with no escape (lmao rip bozo)
 
     [DataField]
-    public string DevourAction = "ActionDevour";
-    public EntityUid? DevourActionEntity;
+    public string WakeUpAction = "ActionDevour";
+    public EntityUid? WakeUpActionEntity;
 }
+
+[RegisterComponent, NetworkedComponent]
+public sealed partial class DeepSleepSpawnEntityComponent : Component
+{
+
+    [DataField]
+    public bool BuckleToOnSpawn = false;
+
+    // Beds with this component will be the default point where an entity going into dream-world will appear.
+
+    // This can be literally anything. If it can be buckled to, they'll be buckled to it.
+
+    // Go ahead, make it an entirely invisible entity for stuff like bitrunners, idc
+}
+
+public sealed partial class DeepSleepActionEvent : InstantActionEvent;

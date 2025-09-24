@@ -1,0 +1,11 @@
+- type: entity
+  id: ActionSleepDeep
+  name: Dream
+  description: Let the darkness take you and dream of another world.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    icon: { sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi, state: icon }
+    event: !type:SleepActionEvent

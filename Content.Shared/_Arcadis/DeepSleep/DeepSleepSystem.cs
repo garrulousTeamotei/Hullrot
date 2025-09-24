@@ -21,11 +21,28 @@ public sealed class DeepSleepSystem : EntitySystem
     {
         base.Initialize();
 
-        // SubscribeLocalEvent<DeepSleepSleepingComponent, ExaminedEvent>(OnExamined);
+        // SubscribeLocalEvent<DeepSleepSleepingComponent, ExaminedEvent>(OnDeepSleepAction);
+        // SubscribeLocalEvent()
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        foreach (var comp in EntityManager.EntityQuery<DeepSleepSleepingComponent>())
+        {
+            // so sue me for using comp.Owner, whaddaya WANT me to do here???
+            if (!TryComp<DeepSleepShaderComponent>(comp.Owner, out var shadercomp))
+                EnsureComp<DeepSleepShaderComponent>(comp.Owner, out shadercomp);
+
+            shadercomp.SleepProgression += comp.SleepProgressionSpeed;
+            if (shadercomp.SleepProgression <= 0)
+            {
+                RemComp<DeepSleepShaderComponent>(comp.Owner);
+                RemComp<DeepSleepSleepingComponent>(comp.Owner);
+            }
+        }
+
+        // Tyler is going to kill me for this system if it is ever upstreamed. Count my days.
     }
 }
