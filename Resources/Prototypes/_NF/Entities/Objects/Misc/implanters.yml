@@ -7,4 +7,6 @@
   components:
     - type: Implanter
       implant: MedicalTrackingImplant
+    - type: StaticPrice
+      price: 10
 

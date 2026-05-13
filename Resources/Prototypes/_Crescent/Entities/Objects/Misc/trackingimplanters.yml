@@ -18,6 +18,8 @@
           variation: 0.15
           volume: -8
           range: 1
+    - type: StaticPrice
+      price: 40
 
 # Hullrot vital tracking implants
 # IPM
@@ -40,6 +42,8 @@
           variation: 0.15
           volume: -8
           range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -48,6 +52,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantInterdyne
+    - type: StaticPrice
+      price: 10
 
 # CMM
 - type: entity
@@ -69,6 +75,8 @@
           variation: 0.15
           volume: -8
           range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -77,6 +85,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantCMM
+    - type: StaticPrice
+      price: 10
 
 # SHI
 - type: entity
@@ -98,6 +108,8 @@
           variation: 0.15
           volume: -8
           range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -106,6 +118,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantShinohara
+    - type: StaticPrice
+      price: 10
 
 # DSM
 - type: entity
@@ -127,6 +141,8 @@
         variation: 0.15
         volume: -8
         range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -135,6 +151,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantDSMCommand
+    - type: StaticPrice
+      price: 10
 
 - type: entity
   parent: TrackingImplant
@@ -155,6 +173,8 @@
         variation: 0.15
         volume: -8
         range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -163,6 +183,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantDSMCivilian
+    - type: StaticPrice
+      price: 10
 
 # NCWL
 - type: entity
@@ -184,6 +206,8 @@
         variation: 0.15
         volume: -8
         range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -192,6 +216,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantNCWL
+    - type: StaticPrice
+      price: 10
 
 # CRN
 - type: entity
@@ -212,6 +238,8 @@
         variation: 0.15
         volume: -8
         range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -220,6 +248,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantCRN
+    - type: StaticPrice
+      price: 10
 
 # ATH
 - type: entity
@@ -240,6 +270,8 @@
         variation: 0.15
         volume: -8
         range: 1
+    - type: StaticPrice
+      price: 40
 
 - type: entity
   parent: BaseImplantOnlyImplanter
@@ -248,6 +280,8 @@
   components:
     - type: Implanter
       implant: TrackingImplantATH
+    - type: StaticPrice
+      price: 10
 
 # NAP - uncomment when NAP has comms
 #- type: entity
@@ -268,6 +302,8 @@
 #        variation: 0.15
 #        volume: -8
 #        range: 1
+#   - type: StaticPrice
+#     price: 40
 #- type: entity
 #  parent: BaseImplantOnlyImplanter
 #  id: VitalsTrackingImplanterNAP
@@ -275,3 +311,5 @@
 #  components:
 #    - type: Implanter
 #      implant: TrackingImplantNAP
+#   - type: StaticPrice
+#     price: 40
